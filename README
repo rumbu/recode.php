@@ -1,0 +1,5 @@
+recode.php
+
+Convert all files in project folder from cp-1251 to utf-8
+@author: R.Lisin
+@see http://www.lisin.ru/2011/02/09/convert-cp1251-to-utf8/
