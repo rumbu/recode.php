@@ -4,7 +4,7 @@
   * php recode.php -p www
   */
 
-// ищем файлы
+// file listing
 function browseCall($dir, $regex, $cb) {
  foreach(glob(chop($dir,'/')."/*") as $file) {
    if (is_dir($file)) browseCall($file, $regex, $cb);
@@ -12,7 +12,7 @@ function browseCall($dir, $regex, $cb) {
      call_user_func_array($cb, array($file));
  }
 }
-// заменяем кодировку
+// change encoding
 function myRecode($file) {
  $s = file_get_contents($file);
  $e = detectEncoding($s);
@@ -24,7 +24,7 @@ function myRecode($file) {
  }
  else echo "\n";
 }
-// определялка кодировки
+// encoding detector
 function detectEncoding($string) {
  static $list = array('utf-8', 'windows-1251');
  foreach ($list as $item) {

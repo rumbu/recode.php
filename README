@@ -1,5 +1,15 @@
 recode.php
-
 Convert all files in project folder from cp-1251 to utf-8
+
+This small script I wrote for php project in cp1251 encoding.
+In one beautiful day I moved a DB to UTF8 and all files also need to be recoded.
+
+Usage:
+* activate the iconv php extension (http://www.php.net/iconv)
+* put script to a project upper-folder
+* run "php recode.php -p www", where www is your directory to be recoded
+* .php, .tpl, .conf, .inc - are target for recoding by default, but you can easiliy change it
+* script detects if file is already in UTF8 and don't proceed file twice on second run
+
 @author: R.Lisin
 @see http://www.lisin.ru/2011/02/09/convert-cp1251-to-utf8/
